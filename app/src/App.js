@@ -1,4 +1,6 @@
 import "./App.css";
+import Search from "./components/search";
+import SearchBtn from "./components/searchBtn";
 
 function App() {
   return (
@@ -6,12 +8,8 @@ function App() {
       <div className="App">
         <header className="App-header"> Weather Forecast</header>
         <p className="App-Paragraph">Enter your Zip Code to get started</p>
-        <div className="App-Search">
-          <input type="text" placeholder="Zip Code" />
-        </div>
-        <div className="App-Button">
-          <button type="button">Search</button>
-        </div>
+        <Search />
+        <SearchBtn />
       </div>
     </body>
   );
