@@ -1,7 +1,13 @@
 const SearchBtn = () => {
+  const handleClick = () => {
+    alert("Button clicked!");
+  };
+
   return (
     <div className="App-Button">
-      <button type="button">Search</button>
+      <button onClick={handleClick} type="button">
+        Search
+      </button>
     </div>
   );
 };
