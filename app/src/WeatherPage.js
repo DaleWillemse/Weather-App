@@ -1,10 +1,10 @@
 import React from "react";
 import "./WeatherPage.css";
-import HumidTile from "C:/Users/DaleWillemse/Documents/GitHub/Weather-App/app/src/components/humidity_tile.js";
-import RainTile from "C:/Users/DaleWillemse/Documents/GitHub/Weather-App/app/src/components/rain_tile";
-import WindTile from "C:/Users/DaleWillemse/Documents/GitHub/Weather-App/app/src/components/wind_tile";
-import Switch from "C:/Users/DaleWillemse/Documents/GitHub/Weather-App/app/src/components/switch.js";
-import WeatherIcon from "C:/Users/DaleWillemse/Documents/GitHub/Weather-App/app/src/components/weather_icon.js";
+import HumidTile from "./components/humidity_tile";
+import RainTile from "./components/rain_tile";
+import WindTile from "./components/wind_tile";
+import Switch from "./components/switch";
+import WeatherIcon from "./components/weather_icon";
 
 function WeatherPage() {
   return (
