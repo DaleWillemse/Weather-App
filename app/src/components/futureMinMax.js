@@ -1,4 +1,5 @@
-
+// App.js requires --- import FutureMinMax from './components/futureMinMax';
+// Condition passed --- <FutureMinMax min='10' max='20' date='3/5/2023' condition='Rain'/>
 
 import React from "react";
 import './futureMinMax.css';
