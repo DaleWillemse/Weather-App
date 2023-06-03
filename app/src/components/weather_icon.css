@@ -1,3 +1,7 @@
-.icon {
+.icon { 
+    filter: invert(100%);
+} 
+
+.weatherIcon{
     width: 128px;
 }

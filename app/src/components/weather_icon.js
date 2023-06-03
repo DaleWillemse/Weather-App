@@ -32,7 +32,7 @@ const weatherIcon = props => {
 
     //Switch works Icon is jus not assigned
     return (
-    <img className="icon" src={icon} alt="Missing Weather Icon"/>
+    <img className="icon weatherIcon" src={icon} alt="Missing Weather Icon"/>
     )
 };
 
