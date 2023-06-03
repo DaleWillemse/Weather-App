@@ -1,3 +1,4 @@
+// App.js Requires ... import Switch from './components/switch';
 import React from 'react';
 import './switch.css'
 
