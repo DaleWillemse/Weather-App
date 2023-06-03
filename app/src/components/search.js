@@ -1,6 +1,12 @@
+import { useNavigate } from "react-router-dom";
+
 const Search = () => {
-  const handleClick = () => {
-    alert(document.getElementById("zipSearch").value);
+  const navigate = useNavigate();
+
+  const handleClick = (event) => {
+    // alert(document.getElementById("zipSearch").value);
+    event.preventDefault();
+    navigate("/WeatherPage");
   };
   return (
     <div>
