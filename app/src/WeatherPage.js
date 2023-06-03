@@ -5,20 +5,19 @@ import RainTile from "./components/rain_tile";
 import WindTile from "./components/wind_tile";
 import Switch from "./components/switch";
 import WeatherIcon from "./components/weather_icon";
+import Location from "./components/location";
+import Temperature from "./components/temperature";
 
 function WeatherPage() {
   return (
     <div>
       <div className="WeatherContainer">
-        <div className="CityName">CAPE TOWN</div>
-        <div className="Date">31 May 2023</div>
+        <Location city="Pretoria" />
         <div className="WeatherIcon">
           <WeatherIcon condition="Clouds" />
         </div>
         <div className="Temperature">
-          <div className="TemperatureNumber">
-            <span id="temp">18</span>°
-          </div>
+          <Temperature temperature="50" />
           <div className="Switch">
             <Switch />
           </div>
@@ -39,7 +38,7 @@ function WeatherPage() {
         <div className="WeekDay">
           <div className="WeekDayName">Thursday</div>
           <div className="WeekDayTemp">
-            <span id="temp">18</span>°
+            <Temperature temperature="50" />
           </div>
           <div className="WeekDayIcon">
             <WeatherIcon condition="Snow" />
@@ -48,7 +47,7 @@ function WeatherPage() {
         <div className="WeekDay">
           <div className="WeekDayName">Thursday</div>
           <div className="WeekDayTemp">
-            <span id="temp">18</span>°
+            <Temperature temperature="50" />
           </div>
           <div className="WeekDayIcon">
             <WeatherIcon condition="Rain" />
@@ -57,7 +56,7 @@ function WeatherPage() {
         <div className="WeekDay">
           <div className="WeekDayName">Thursday</div>
           <div className="WeekDayTemp">
-            <span id="temp">18</span>°
+            <Temperature temperature="50" />
           </div>
           <div className="WeekDayIcon">
             <WeatherIcon condition="Clouds" />
@@ -66,7 +65,7 @@ function WeatherPage() {
         <div className="WeekDay">
           <div className="WeekDayName">Thursday</div>
           <div className="WeekDayTemp">
-            <span id="temp">18</span>°
+            <Temperature temperature="50" />
           </div>
           <div className="WeekDayIcon">
             <WeatherIcon condition="Wind" />
@@ -75,7 +74,7 @@ function WeatherPage() {
         <div className="WeekDay">
           <div className="WeekDayName">Thursday</div>
           <div className="WeekDayTemp">
-            <span id="temp">18</span>°
+            <Temperature temperature="50" />
           </div>
           <div className="WeekDayIcon">
             <WeatherIcon condition="Clear" />

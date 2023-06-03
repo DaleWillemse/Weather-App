@@ -4,18 +4,6 @@
   left: 380px;
 }
 
-.CityName {
-  font-size: 40px;
-  font-weight: bold;
-  color: #fff;
-}
-
-.Date {
-  font-size: 20px;
-  color: #fff;
-  margin-left: 20px;
-}
-
 .WeatherIcon {
   position: absolute;
   width: 128px;
