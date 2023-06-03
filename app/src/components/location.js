@@ -2,24 +2,25 @@
 // <Location city='Pretoria'/>
 
 import React from "react";
-import './location.css';
+import "./location.css";
 
-const Location = props => {
-    let city = props.city;
+const Location = (props) => {
+  let city = props.city.toUpperCase();
 
-    let dateCurrent = new Date();
-    let date = `${dateCurrent.getDate()}/${dateCurrent.getMonth()}/${dateCurrent.getFullYear()} `;
+  let dateCurrent = new Date();
+  let date =
+    dateCurrent.toLocaleDateString("en-US", { day: "numeric" }) +
+    " " +
+    dateCurrent.toLocaleDateString("en-US", { month: "long" }) +
+    " " +
+    dateCurrent.toLocaleDateString("en-US", { year: "numeric" });
 
-    return (
-        <div>
-            <h1 id="City">
-                {city}
-            </h1>
-            <h2 id="currentDate">
-                {date}
-            </h2>
-        </div>
-    );
- };
- 
- export default Location;
+  return (
+    <div>
+      <h1 id="City">{city}</h1>
+      <h2 id="currentDate">{date}</h2>
+    </div>
+  );
+};
+
+export default Location;
