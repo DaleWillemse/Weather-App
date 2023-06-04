@@ -35,7 +35,7 @@ class WeatherPage extends Component {
           this.setState({
             loading: false,
             cityName: data.data.name,
-            weatherCondition: data.data.weather.main,
+            weatherCondition: data.data.weather[0].main,
             currentTemperature: data.data.main.temp,
             rainExpected: data.data.rain,
             windExpected: data.data.wind.speed,
