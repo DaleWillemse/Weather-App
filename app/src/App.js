@@ -1,7 +1,7 @@
-import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import WeatherPage from "./views/WeatherPage";
 import HomePage from "./views/HomePage";
+import ErrorPage from "./views/ErrorPage";
 
 function App() {
   return (
@@ -10,6 +10,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/current-weather" element={<WeatherPage />} />
+          <Route path="*" element={<ErrorPage />} />
         </Routes>
       </div>
     </body>

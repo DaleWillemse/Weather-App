@@ -12,6 +12,7 @@ import Switch from "../components/switch";
 import WeatherIcon from "../components/weather_icon";
 import Location from "../components/location";
 import Temperature from "../components/temperature";
+import HomeBtn from "../components/homeBtn";
 
 // Weather Api Information required fields
 class WeatherPage extends Component {
@@ -52,14 +53,17 @@ class WeatherPage extends Component {
           });
         }
       })
-      .catch(error => {
+      .catch((error) => {
         console.log(error.message);
-      })
+      });
   }
 
   render() {
     const Weather_Page = (
       <div>
+        <div className="HomeBtn">
+          <HomeBtn />
+        </div>
         <div className="WeatherContainer">
           <Location city={this.state.cityName} />
           <div className="WeatherIcon">

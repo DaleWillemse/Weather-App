@@ -13,7 +13,7 @@ const Search = () => {
   // '/searchlocaion' refers to server/routes/api/weatherApi.js
   return (
     <div>
-      <form method='POST' action='/searchLocation'>
+      <form method="POST" action="/searchLocation">
         <div className="App-Search">
           <input id="zipSearch" type="text" placeholder="Zip Code" />
         </div>
