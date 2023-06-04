@@ -4,14 +4,16 @@ import { link } from "react-router-dom";
 //link handels page navigation
 
 import "./WeatherPage.css";
-// Consider making seperatte index.js file to handle all the imports
-import HumidTile from "../components/humidity_tile";
-import RainTile from "../components/rain_tile";
-import WindTile from "../components/wind_tile";
-import Switch from "../components/switch";
-import WeatherIcon from "../components/weather_icon";
-import Location from "../components/location";
-import Temperature from "../components/temperature";
+import {
+  HumidTile,
+  RainTile,
+  WindTile,
+  Switch,
+  WeatherIcon,
+  Location,
+  Temperature,
+  HomeBtn,
+} from "../components";
 
 // Weather Api Information required fields
 class WeatherPage extends Component {
@@ -44,7 +46,7 @@ class WeatherPage extends Component {
             //Check OpenweatherAPI documentation for json format
             loading: false,
             cityName: data.data.name,
-            weatherCondition: data.data.weather.main,
+            weatherCondition: data.data.weather[0].description,
             currentTemperature: data.data.main.temp,
             rainExpected: data.data.rain, //Might have error here rain.1h
             windExpected: data.data.wind.speed,
@@ -52,14 +54,17 @@ class WeatherPage extends Component {
           });
         }
       })
-      .catch(error => {
+      .catch((error) => {
         console.log(error.message);
-      })
+      });
   }
 
   render() {
     const Weather_Page = (
       <div>
+        <div className="HomeBtn">
+          <HomeBtn />
+        </div>
         <div className="WeatherContainer">
           <Location city={this.state.cityName} />
           <div className="WeatherIcon">

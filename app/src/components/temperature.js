@@ -5,7 +5,7 @@ import React from "react";
 import "./temperature.css";
 
 const Temperature = (props) => {
-  let temp = props.temperature;
+  let temp = Math.round(props.temperature);
 
   return <div id="containerTemperature">{temp}&deg;</div>;
 };
