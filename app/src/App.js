@@ -1,7 +1,7 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import WeatherPage from "./views/WeatherPage";
-import HomePage from "./views/HomePage";
+import HomePage from "./views/Home";
 import ErrorPage from "./views/ErrorPage";
 
 function App() {

@@ -7,6 +7,7 @@ import WindTile from "../components/wind_tile";
 import WeatherIcon from "../components/weather_icon";
 import Location from "../components/location";
 import Temperature from "../components/temperature";
+import HomeBtn from "../components/homeBtn";
 
 class WeatherPage extends Component {
   constructor(props) {
@@ -35,7 +36,7 @@ class WeatherPage extends Component {
           this.setState({
             loading: false,
             cityName: data.data.name,
-            weatherCondition: data.data.weather[0].description,
+            weatherCondition: data.data.weather[0].main,
             currentTemperature: data.data.main.temp,
             rainExpected: data.data.rain,
             windExpected: data.data.wind.speed,
@@ -92,6 +93,9 @@ class WeatherPage extends Component {
 
     return (
       <div>
+        <div>
+          <HomeBtn />
+        </div>
         <div className="WeatherContainer">
           <Location city={cityName} />
           <div className="WeatherIcon">

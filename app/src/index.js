@@ -6,7 +6,7 @@ import { BrowserRouter, Route } from "react-router-dom";
 
 import App from "./App";
 
-import Home from "./views/HomePage";
+import Home from "./views/Home";
 import CurrentWeather from "./views/WeatherPage";
 import ErrorPage from "./views/ErrorPage";
 
