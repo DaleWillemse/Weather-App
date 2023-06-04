@@ -10,7 +10,7 @@ const RainTile = props => {
         <div className="containerTiles"> 
             <img className="icon" src="/weather_icons/rainy.png" alt="Missing Weather Icon"/>
             <div className="currentCondition">
-                {rain}
+                {rain} %
             </div>
             <label className="tileName">Rain</label>
         </div>

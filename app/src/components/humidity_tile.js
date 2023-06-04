@@ -10,7 +10,7 @@ const HumidTile = props => {
         <div className="containerTiles">          
             <img className="icon" src="/weather_icons/foggy.png" alt="Missing Weather Icon"/>
             <div className="currentCondition">
-                {humid}
+                {humid} %
             </div>
             <label className="tileName">Humidity</label>
         </div>
