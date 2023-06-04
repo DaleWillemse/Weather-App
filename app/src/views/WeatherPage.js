@@ -1,12 +1,10 @@
 import React from "react";
 import { Component } from "react";
-import { link } from "react-router-dom";
 //link handels page navigation
 
 import "./WeatherPage.css";
 import {
   HumidTile,
-  RainTile,
   WindTile,
   Switch,
   WeatherIcon,
@@ -48,7 +46,6 @@ class WeatherPage extends Component {
             cityName: data.data.name,
             weatherCondition: data.data.weather[0].description,
             currentTemperature: data.data.main.temp,
-            rainExpected: data.data.rain, //Might have error here rain.1h
             windExpected: data.data.wind.speed,
             humidityExpected: data.data.main.humidity,
           });
@@ -78,60 +75,10 @@ class WeatherPage extends Component {
           </div>
           <div className="WeatherCondition">
             <div>
-              <RainTile rain={this.state.rainExpected} />
-            </div>
-            <div>
               <HumidTile humid={this.state.humidityExpected} />
             </div>
             <div>
               <WindTile wind={this.state.windExpected} />
-            </div>
-          </div>
-        </div>
-        <div className="WeeksWeather">
-          <div className="WeekDay">
-            <div className="WeekDayName">Thursday</div>
-            <div className="WeekDayTemp">
-              <Temperature temperature={this.state.currentTemperature} />
-            </div>
-            <div className="WeekDayIcon">
-              <WeatherIcon condition={this.state.weatherCondition} />
-            </div>
-          </div>
-          <div className="WeekDay">
-            <div className="WeekDayName">Thursday</div>
-            <div className="WeekDayTemp">
-              <Temperature temperature={this.state.currentTemperature} />
-            </div>
-            <div className="WeekDayIcon">
-              <WeatherIcon condition={this.state.weatherCondition} />
-            </div>
-          </div>
-          <div className="WeekDay">
-            <div className="WeekDayName">Thursday</div>
-            <div className="WeekDayTemp">
-              <Temperature temperature={this.state.currentTemperature} />
-            </div>
-            <div className="WeekDayIcon">
-              <WeatherIcon condition={this.state.weatherCondition} />
-            </div>
-          </div>
-          <div className="WeekDay">
-            <div className="WeekDayName">Thursday</div>
-            <div className="WeekDayTemp">
-              <Temperature temperature={this.state.currentTemperature} />
-            </div>
-            <div className="WeekDayIcon">
-              <WeatherIcon condition={this.state.weatherCondition} />
-            </div>
-          </div>
-          <div className="WeekDay">
-            <div className="WeekDayName">Thursday</div>
-            <div className="WeekDayTemp">
-              <Temperature temperature={this.state.currentTemperature} />
-            </div>
-            <div className="WeekDayIcon">
-              <WeatherIcon condition={this.state.weatherCondition} />
             </div>
           </div>
         </div>

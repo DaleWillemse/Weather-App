@@ -16,7 +16,7 @@ const Location = (props) => {
     dateCurrent.toLocaleDateString("en-US", { year: "numeric" });
 
   return (
-    <div>
+    <div className="LocationData">
       <h1 id="City">{city}</h1>
       <h2 id="currentDate">{date}</h2>
     </div>
