@@ -59,3 +59,8 @@ server - Open [hhtp://localhost:3010](hhtp://localhost:3010) to confirm server i
 Runs the app in the development mode.\
 
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+
+### `npm update-all`
+
+Installes all relevant dependecies on both Server and Client

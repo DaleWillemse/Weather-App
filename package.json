@@ -6,7 +6,10 @@
   "scripts": {
     "client": "cd app && npm run start",
     "server": "cd server && nodemon App.js",
-    "start": "concurrently --kill-others-on-fail \"npm run client\" \"npm run server\""
+    "start": "concurrently --kill-others-on-fail \"npm run client\" \"npm run server\"",
+    "update-client":"cd app && npm i",
+    "update-server":"cd server && npm i",
+    "update-all":"\"npm run update-client\" \"npm run update-server\""
   },
   "repository": {
     "type": "git",
