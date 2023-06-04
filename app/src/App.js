@@ -1,7 +1,7 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
-import WeatherPage from "./views/WeatherPage";
-import HomePage from "./views/HomePage";
+import WeatherPage from "./WeatherPage";
+import HomePage from "./HomePage";
 
 function App() {
   return (
@@ -9,7 +9,7 @@ function App() {
       <div className="App">
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/current-weather" element={<WeatherPage />} />
+          <Route path="/WeatherPage" element={<WeatherPage />} />
         </Routes>
       </div>
     </body>

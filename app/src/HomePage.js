@@ -1,6 +1,6 @@
 import React from "react";
 import "./HomePage.css";
-import Search from "../components/search.js";
+import Search from "./components/search";
 
 function HomePage() {
   return (
