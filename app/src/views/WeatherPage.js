@@ -46,7 +46,7 @@ class WeatherPage extends Component {
             //Check OpenweatherAPI documentation for json format
             loading: false,
             cityName: data.data.name,
-            weatherCondition: data.data.weather.main,
+            weatherCondition: data.data.weather[0].description,
             currentTemperature: data.data.main.temp,
             rainExpected: data.data.rain, //Might have error here rain.1h
             windExpected: data.data.wind.speed,
