@@ -13,7 +13,7 @@ const WindTile = (props) => {
         src="/weather_icons/windy.png"
         alt="Missing Weather Icon"
       />
-      <div className="currentCondition">{wind}m/s</div>
+      <div className="currentCondition">{wind} m/s</div>
       <label className="tileName">Wind</label>
     </div>
   );
