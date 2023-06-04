@@ -1,18 +1,21 @@
+import React from "react";
+import { Component } from "react";
+
 const Search = () => {
-  //Requires Form methode="POST"
-  // '/searchlocaion' refers to server/routes/api/weatherApi.js
   return (
+    //Requires Form methode="POST"
+    //'/searchlocaion' refers to server/routes/api/weatherApi.js
     <div>
-      <form method="POST" action="/searchLocation">
-        <div className="App-Search">
-          <input id="zipSearch" type="text" placeholder="Zip Code" />
-        </div>
+      <form method='POST' action='/searchLocation'>       
+        <input className="App-Search" type="text" placeholder="Zip Code" name="zip"/>     
         <div className="App-Button">
-          <button>Search</button>
+          <button type="submit">
+            Search
+          </button>
         </div>
       </form>
     </div>
   );
-};
-
+  };
+ 
 export default Search;
