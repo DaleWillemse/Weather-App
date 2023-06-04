@@ -1,30 +1,21 @@
-import { useNavigate } from "react-router-dom";
+import React from "react";
+import { Component } from "react";
 
 const Search = () => {
-  const navigate = useNavigate();
-
-  const handleClick = (event) => {
-    // alert(document.getElementById("zipSearch").value);
-    event.preventDefault();
-    navigate("/current-weather"); // -------------------------------------- Well have to be removed at some point
-  };
-
-  //Requires Form methode="POST"
-  // '/searchlocaion' refers to server/routes/api/weatherApi.js
   return (
+    //Requires Form methode="POST"
+    //'/searchlocaion' refers to server/routes/api/weatherApi.js
     <div>
-      <form method='POST' action='/searchLocation'>
-        <div className="App-Search">
-          <input id="zipSearch" type="text" placeholder="Zip Code" />
-        </div>
+      <form method='POST' action='/searchLocation'>       
+        <input className="App-Search" type="text" placeholder="Zip Code" name="zip"/>     
         <div className="App-Button">
-          <button onClick={handleClick} type="button">
+          <button type="submit">
             Search
           </button>
         </div>
       </form>
     </div>
   );
-};
-
+  };
+ 
 export default Search;
