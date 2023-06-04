@@ -10,7 +10,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/current-weather" element={<WeatherPage />} />
-          <Route path="*" element={<ErrorPage />} />
+          <Route path="/*" element={<ErrorPage />} />
         </Routes>
       </div>
     </body>

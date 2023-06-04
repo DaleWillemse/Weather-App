@@ -8,15 +8,17 @@ import App from "./App";
 
 import Home from "./views/HomePage";
 import CurrentWeather from "./views/WeatherPage";
+import ErrorPage from "./views/ErrorPage";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <App>        
-        <Route exact path='/' component={Home}/>
-        <Route exact path='/current-weather' component={CurrentWeather}/>
+      <App>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/current-weather" component={CurrentWeather} />
+        <Route exact path="/error" component={ErrorPage} />
       </App>
     </BrowserRouter>
   </React.StrictMode>
