@@ -1,4 +1,5 @@
 import React from "react";
+import { Component } from "react";
 import "./HomePage.css";
 import Search from "../components/search.js";
 

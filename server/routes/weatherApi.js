@@ -5,7 +5,7 @@ const KEY = process.env.KEY;
 //node-fetch has an error with the latest version. So downgraded to v2
 const fetch = require('node-fetch'); //Handles fetching information form api
 
-const app = () => {
+module.exports = (app) => {
     let zip = '';
     const country = 'ZA';
 
@@ -24,7 +24,7 @@ const app = () => {
     });
 
     // Get Route that is called by the React Frontend "ie. CurrentWeather.js" ... React Frontend will require 'React Router' 
-    app.get('searchLocationWeather', (req, res) => {
+    app.get('/searchLocationWeather', (req, res) => {
         //Creates string containing Country, Zip and required API KEY
         const stringBuilder_url = `https://api.openweathermap.org/data/2.5/weather?zip=${zip},${country}&appid=${KEY}`;
 
@@ -38,5 +38,3 @@ const app = () => {
         })
     });  
 }
-
-module.exports = app;

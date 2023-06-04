@@ -11,7 +11,7 @@ const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json()); //Recieves json file
 
-require('./routes/api/weatherApi.js');
+require('./routes/weatherApi.js');
 
 //Check to see if express server is running
 app.get('/', function(req, res){
