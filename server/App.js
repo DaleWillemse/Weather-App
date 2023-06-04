@@ -40,7 +40,7 @@ app.post("/searchLocation", (req, res) => {
 // Get Route that is called by the React Frontend "ie. CurrentWeather.js" ... React Frontend will require 'React Router'
 app.get("/searchLocationWeather", (req, res) => {
   //Creates string containing Country, Zip and required API KEY
-  const stringBuilder_url = `https://api.openweathermap.org/data/2.5/weather?zip=${zip},${country}&appid=${KEY}&units=metric`;
+  const stringBuilder_url = `https://api.openweathermap.org/data/2.5/weather?zip=${zip},${country}&appid=${KEY}`;
 
   fetch(stringBuilder_url)
     .then((res) => res.json())
