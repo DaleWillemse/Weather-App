@@ -5,6 +5,7 @@ import { Component } from "react";
 import "./WeatherPage.css";
 import {
   HumidTile,
+  RainTile,
   WindTile,
   Switch,
   WeatherIcon,
@@ -46,6 +47,7 @@ class WeatherPage extends Component {
             cityName: data.data.name,
             weatherCondition: data.data.weather[0].description,
             currentTemperature: data.data.main.temp,
+            rainExpected: data.data.rain,
             windExpected: data.data.wind.speed,
             humidityExpected: data.data.main.humidity,
           });
@@ -74,6 +76,9 @@ class WeatherPage extends Component {
             </div>
           </div>
           <div className="WeatherCondition">
+            <div>
+              <RainTile rain={this.state.rainExpected} />
+            </div>
             <div>
               <HumidTile humid={this.state.humidityExpected} />
             </div>
