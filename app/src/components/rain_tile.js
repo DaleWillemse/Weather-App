@@ -3,7 +3,7 @@
 import "./tiles.css";
 import React from "react";
 
-const RainTile = ({ rain }) => {
+const RianTile = ({ rain }) => {
   if (typeof rain === "object") {
     return <div>Rain information not available</div>;
   }
