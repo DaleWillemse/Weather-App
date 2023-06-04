@@ -1,10 +1,12 @@
 // App.js requires --- import RainTile from './components/rain_tile';
 // Condition passed --- <RainTile wind='10m/s'/>
-import React from "react";
 import "./tiles.css";
+import React from "react";
 
-const RainTile = (props) => {
-  let rain = props.rain;
+const RainTile = ({ rain }) => {
+  if (typeof rain === "object") {
+    return <div>Rain information not available</div>;
+  }
 
   return (
     <div className="containerTiles">
@@ -13,7 +15,7 @@ const RainTile = (props) => {
         src="/weather_icons/rainy.png"
         alt="Missing Weather Icon"
       />
-      <div className="currentCondition">{rain} %</div>
+      <div className="currentCondition">{rain}</div>
       <label className="tileName">Rain</label>
     </div>
   );
