@@ -1,13 +1,24 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import reportWebVitals from "./reportWebVitals";
+import { BrowserRouter, Route } from "react-router-dom";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+import App from "./App";
+
+import Home from "./views/HomePage";
+import CurrentWeather from "./views/WeatherPage";
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <App>        
+        <Route exact path='/' component={Home}/>
+        <Route exact path='/current-weather' component={CurrentWeather}/>
+      </App>
+    </BrowserRouter>
   </React.StrictMode>
 );
 

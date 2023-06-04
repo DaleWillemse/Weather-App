@@ -2,18 +2,12 @@
 //required --- <Temperature temperature='50'/>
 
 import React from "react";
-import './temperature.css';
+import "./temperature.css";
 
-const Temperature = props => {
-    let temp = props.temperature;
+const Temperature = (props) => {
+  let temp = props.temperature;
 
-    return (
-        <div id="containerTemperature">
-            <h1>
-                {temp}&deg;
-            </h1>
-        </div>  
-    );
- };
- 
- export default Temperature;
+  return <div id="containerTemperature">{temp}&deg;</div>;
+};
+
+export default Temperature;
