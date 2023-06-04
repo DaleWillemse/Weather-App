@@ -6,23 +6,18 @@ const Search = () => {
   const handleClick = (event) => {
     // alert(document.getElementById("zipSearch").value);
     event.preventDefault();
-    navigate("/current-weather"); // -------------------------------------- Well have to be removed at some point
+    navigate("/WeatherPage");
   };
-
-  //Requires Form methode="POST"
-  // '/searchlocaion' refers to server/routes/api/weatherApi.js
   return (
     <div>
-      <form method="POST" action="/searchLocation">
-        <div className="App-Search">
-          <input id="zipSearch" type="text" placeholder="Zip Code" />
-        </div>
-        <div className="App-Button">
-          <button onClick={handleClick} type="button">
-            Search
-          </button>
-        </div>
-      </form>
+      <div className="App-Search">
+        <input id="zipSearch" type="text" placeholder="Zip Code" />
+      </div>
+      <div className="App-Button">
+        <button onClick={handleClick} type="button">
+          Search
+        </button>
+      </div>
     </div>
   );
 };
