@@ -1,4 +1,5 @@
 This Weather-App was created by for WPR381:
+
     Albrecht Ohsiek
     
     Dale Willemse
@@ -12,7 +13,7 @@ This Weather-App was created by for WPR381:
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-----------------------------------------------------IMPORTANT---------------------------------------------------------------
+--------------------------------------------------------------IMPORTANT-------------------------------------------------------------------------
 
 Please include own .env File in the Weather-App/server directory that include the following:
 PORT = 3010
