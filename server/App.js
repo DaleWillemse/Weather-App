@@ -8,12 +8,12 @@ const PORT = process.env.PORT;
 const express = require('express');
 const app = express();
 
-app.use(express.urlencoded({extended: true}));
-app.use(express.json); //Recieves json file
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json()); //Recieves json file
 
-// Import routes
-require('./routes/api/weatherApi');
+require('./routes/api/weatherApi.js');
 
+//Check to see if express server is running
 app.get('/', function(req, res){
     res.send("API is working");
 });
@@ -25,3 +25,5 @@ app.listen(PORT, (error) => {
     };
     console.log(`Server is running on port: ${PORT}`);
 })
+
+
